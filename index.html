@@ -8,7 +8,17 @@
     <style>
         header {
     margin-bottom: 100px; /* Adds space below the header */
-}
+        }
+                .logo-header {
+            max-width: 180px;
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for both */
+        }
+        
+        .logo-header:hover {
+            transform: translateY(-4px); /* Moves the image up slightly */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow for a lifted effect */
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
@@ -120,7 +130,7 @@
 </head>
 <body>
     <header>
-        <img src="https://raw.githubusercontent.com/Hoodhost/QRGen/refs/heads/main/Hood%20horizontal%20Logo.png" alt="Logo" class="logo-header">
+        <img src="https://raw.githubusercontent.com/Hoodhost/QRGen/refs/heads/main/Hood%20horizontal%20Logo.png" alt="Logo" class="logo-header" onclick="refreshPage()">
     </header>
        <div class="container">
         <!-- First Column: Form -->
