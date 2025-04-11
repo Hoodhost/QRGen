@@ -188,14 +188,16 @@ END:VCARD`;
             });
         }
 
-        function saveQRCode() {
-            const canvas = document.getElementById("qrCanvas");
-            const link = document.createElement("a");
-            link.download = "Hood Contact.png";
-            link.href = canvas.toDataURL(); // Convert canvas to data URL
-            link.click();
-        }
-    </script>
+   function saveQRCode() {
+    const canvas = document.getElementById("qrCanvas");
+    const name = document.getElementById("name").value.trim() || "QRCode"; // Default if name is empty
+    const sanitizedFileName = name.replace(/[^a-zA-Z0-9-_]/g, ""); // Remove special characters to ensure a valid filename
+    
+    const link = document.createElement("a");
+    link.download = `${sanitizedFileName}.png`; // Dynamic filename
+    link.href = canvas.toDataURL(); // Convert canvas to data URL
+    link.click();
+}
      
     <footer class="footer">
         <p>&copy; 2025 Hood Industries. All rights reserved.</p>
