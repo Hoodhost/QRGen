@@ -120,9 +120,14 @@
         }
 
         #qrCanvas {
-            margin: 20px 0;
-        }
-
+    margin: 20px 0;
+    border: 3px solid grey; /* Adds a solid grey border */
+    border-radius: 12px; /* Rounds the corners */
+    padding: 10px; /* Adds spacing between the border and QR code */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: adds a subtle background */
+    width: 200px; /* Sets a default width for the placeholder canvas */
+    height: 200px; /* Sets a default height for the placeholder canvas */
+}
         #saveButton {
             display: none; /* Initially hidden */
         }
@@ -159,7 +164,7 @@
         <!-- Second Column: QR Code and Save Button -->
         <div class="column">
              <br><br><br><br><br><br>
-            <canvas id="qrCanvas"></canvas>
+             <canvas id="qrCanvas"></canvas>
             <button id="saveButton" class="button" onclick="saveQRCode()">Save QR Code</button>
         </div>
     </div>
