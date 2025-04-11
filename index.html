@@ -122,16 +122,18 @@
     <header>
         <img src="https://raw.githubusercontent.com/Hoodhost/QRGen/refs/heads/main/Hood%20horizontal%20Logo.png" alt="Logo" class="logo-header">
     </header>
-    <div class="container">
+       <div class="container">
         <!-- First Column: Form -->
         <div class="column">
             <form id="vcardForm">
-                 <h1>Enter Contact Information</h1>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label for="officePhone">Office Phone:</label>
+                <input type="tel" id="officePhone" name="officePhone" required>
+
+                <label for="cellPhone">Cell Phone:</label>
+                <input type="tel" id="cellPhone" name="cellPhone" required>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -153,11 +155,12 @@
     <script>
         async function generateQRCode() {
             const name = document.getElementById("name").value;
-            const phone = document.getElementById("phone").value;
+            const officePhone = document.getElementById("officePhone").value;
+            const cellPhone = document.getElementById("cellPhone").value;
             const email = document.getElementById("email").value;
             const address = document.getElementById("address").value;
 
-            if (!name || !phone || !email) {
+            if (!name || !officePhone || !cellPhone || !email) {
                 alert("Please fill out all required fields.");
                 return;
             }
@@ -166,7 +169,8 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:${name}
-TEL:${phone}
+TEL;TYPE=WORK:${officePhone}
+TEL;TYPE=CELL:${cellPhone}
 EMAIL:${email}
 ADR:${address}
 END:VCARD`;
