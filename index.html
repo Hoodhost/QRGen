@@ -165,6 +165,9 @@
     </div>
 
     <script>
+        function refreshPage() {
+    window.location.reload(); // Reloads the current page
+}
         async function generateQRCode() {
             const name = document.getElementById("name").value;
             const officePhone = document.getElementById("officePhone").value;
