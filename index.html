@@ -190,7 +190,7 @@ END:VCARD`;
         function saveQRCode() {
             const canvas = document.getElementById("qrCanvas");
             const link = document.createElement("a");
-            link.download = ${name}.png;
+            link.download = "Hood Contact.png";
             link.href = canvas.toDataURL(); // Convert canvas to data URL
             link.click();
         }
