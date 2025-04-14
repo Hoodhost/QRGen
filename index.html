@@ -50,7 +50,23 @@
             max-width: 180px;
             height: auto;
         }
+       .nav-button {
+            background: linear-gradient(to right, #ff7b00, #f8a546);
+            color: #ffffff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-left: 20px;
+            text-decoration: none;
+        }
 
+        .nav-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
         h1 {
             color: #1d1d1f;
             font-weight: 600;
@@ -135,8 +151,9 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/Hoodhost/QRGen/refs/heads/main/Hood%20horizontal%20Logo.png" alt="Logo" class="logo-header" onclick="refreshPage()">
+  <header>
+        <img src="https://raw.githubusercontent.com/Hoodhost/QRGen/refs/heads/main/Hood%20horizontal%20Logo.png" alt="Hood Industries Logo" class="logo-header" onclick="refreshPage()">
+        <a href="https://hoodhost.github.io/EmailSignatureGen/" class="nav-button">Email Signatures</a>
     </header>
        <div class="container">
         <!-- First Column: Form -->
